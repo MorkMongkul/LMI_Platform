@@ -1,7 +1,14 @@
 from flask import Flask, jsonify
 from flask_cors import CORS
+from flask_swagger_ui import get_swaggerui_blueprint
 from config import Config
 from models import db
+
+# Import blueprints
+from routes.jobs import jobs_bp
+from routes.skills import skills_bp
+from routes.universities import universities_bp
+from routes.analytics import analytics_bp
 
 app = Flask(__name__)
 app.config.from_object(Config)
@@ -11,6 +18,24 @@ CORS(app)
 
 # Initialize SQLAlchemy
 db.init_app(app)
+
+# Swagger UI configuration
+SWAGGER_URL = '/swagger'
+API_URL = '/static/swagger.json'
+swaggerui_blueprint = get_swaggerui_blueprint(
+    SWAGGER_URL,
+    API_URL,
+    config={
+        'app_name': "LMI Platform API"
+    }
+)
+app.register_blueprint(swaggerui_blueprint, url_prefix=SWAGGER_URL)
+
+# Register Blueprints
+app.register_blueprint(jobs_bp)
+app.register_blueprint(skills_bp)
+app.register_blueprint(universities_bp)
+app.register_blueprint(analytics_bp)
 
 @app.route('/')
 def index():
