@@ -1,0 +1,171 @@
+university_id,university_name,university_type,location,program_category,program_name,degree_level,duration_years,annual_tuition_usd,enrollment_capacity,accredited,languages_of_instruction,established_year,in_demand_field
+UNI0001,Royal University of Phnom Penh,Public,Phnom Penh,Engineering,Industrial Engineering,Bachelor,4,602,266,True,Khmer,1965,True
+UNI0002,Royal University of Phnom Penh,Public,Phnom Penh,Education,Secondary Education,Bachelor,4,587,151,False,"Khmer, English",1974,False
+UNI0003,Royal University of Phnom Penh,Public,Phnom Penh,Healthcare,Public Health,Bachelor,4,657,266,True,"Khmer, English",1969,True
+UNI0004,Royal University of Phnom Penh,Public,Phnom Penh,Healthcare,Public Health,Doctorate,3,820,440,True,Khmer,1965,True
+UNI0005,Royal University of Phnom Penh,Public,Phnom Penh,IT/Computer Science,Data Science,Master,2,1099,226,False,"Khmer, English",2011,True
+UNI0006,Royal University of Phnom Penh,Public,Phnom Penh,Agriculture,Agronomy,Bachelor,4,340,332,True,English,1999,False
+UNI0007,Royal University of Phnom Penh,Public,Phnom Penh,Agriculture,Agronomy,Master,2,1129,491,True,English,1972,False
+UNI0008,Institute of Technology of Cambodia,Public,Phnom Penh,Engineering,Civil Engineering,Master,2,937,477,True,Khmer,1983,True
+UNI0009,Institute of Technology of Cambodia,Public,Phnom Penh,Engineering,Civil Engineering,Bachelor,4,481,157,True,English,2003,True
+UNI0010,Institute of Technology of Cambodia,Public,Phnom Penh,Healthcare,Medical Laboratory Science,Doctorate,3,1250,137,False,English,1975,True
+UNI0011,Institute of Technology of Cambodia,Public,Phnom Penh,Education,Secondary Education,Master,2,1159,377,False,Khmer,2003,False
+UNI0012,Institute of Technology of Cambodia,Public,Phnom Penh,Education,Secondary Education,Bachelor,4,466,481,True,Khmer,2012,False
+UNI0013,Institute of Technology of Cambodia,Public,Phnom Penh,Architecture,Architecture,Master,2,499,158,False,English,1980,False
+UNI0014,Institute of Technology of Cambodia,Public,Phnom Penh,Architecture,Architecture,Bachelor,4,408,385,True,"Khmer, English",2001,False
+UNI0015,Institute of Technology of Cambodia,Public,Phnom Penh,IT/Computer Science,Data Science,Master,2,556,176,False,English,1976,True
+UNI0016,Royal University of Law and Economics,Public,Phnom Penh,Architecture,Architecture,Bachelor,4,621,131,True,English,1964,False
+UNI0017,Royal University of Law and Economics,Public,Phnom Penh,Agriculture,Food Technology,Master,2,1195,333,True,English,2006,False
+UNI0018,Royal University of Law and Economics,Public,Phnom Penh,Agriculture,Food Technology,Bachelor,4,358,399,False,"Khmer, English",2009,False
+UNI0019,Royal University of Law and Economics,Public,Phnom Penh,Law,Business Law,Master,2,783,130,True,Khmer,2006,False
+UNI0020,Royal University of Law and Economics,Public,Phnom Penh,IT/Computer Science,Network Engineering,Bachelor,4,745,370,True,English,1992,True
+UNI0021,Royal University of Law and Economics,Public,Phnom Penh,IT/Computer Science,Network Engineering,Master,2,916,151,True,"Khmer, English",2008,True
+UNI0022,Royal University of Law and Economics,Public,Phnom Penh,Arts/Humanities,English Literature,Master,2,825,59,True,"Khmer, English",2013,False
+UNI0023,Royal University of Law and Economics,Public,Phnom Penh,Education,English Language Teaching,Bachelor,4,423,499,False,Khmer,1965,False
+UNI0024,Royal University of Law and Economics,Public,Phnom Penh,Healthcare,Medical Laboratory Science,Bachelor,4,365,387,True,English,1970,True
+UNI0025,Royal University of Law and Economics,Public,Phnom Penh,Healthcare,Medical Laboratory Science,Doctorate,3,870,320,False,"Khmer, English",1973,True
+UNI0026,Royal University of Law and Economics,Public,Phnom Penh,Engineering,Chemical Engineering,Master,2,756,393,True,"Khmer, English",1993,True
+UNI0027,Royal University of Agriculture,Public,Phnom Penh,IT/Computer Science,Information Technology,Bachelor,4,662,373,True,Khmer,1964,True
+UNI0028,Royal University of Agriculture,Public,Phnom Penh,Healthcare,Medicine,Bachelor,4,442,392,True,Khmer,1994,True
+UNI0029,Royal University of Agriculture,Public,Phnom Penh,Healthcare,Medicine,Doctorate,3,734,420,False,English,1990,True
+UNI0030,Royal University of Agriculture,Public,Phnom Penh,Arts/Humanities,English Literature,Master,2,522,99,True,"Khmer, English",1987,False
+UNI0031,Royal University of Agriculture,Public,Phnom Penh,Arts/Humanities,English Literature,Bachelor,4,510,289,True,English,2001,False
+UNI0032,Royal University of Agriculture,Public,Phnom Penh,Engineering,Industrial Engineering,Bachelor,4,506,422,True,Khmer,1975,True
+UNI0033,Royal University of Agriculture,Public,Phnom Penh,Business,Accounting,Master,2,556,266,True,"Khmer, English",1989,True
+UNI0034,Royal University of Agriculture,Public,Phnom Penh,Agriculture,Animal Science,Master,2,1069,491,False,Khmer,1963,False
+UNI0035,Royal University of Agriculture,Public,Phnom Penh,Architecture,Architecture,Bachelor,4,385,258,True,"Khmer, English",1973,False
+UNI0036,Royal University of Agriculture,Public,Phnom Penh,Law,Criminal Justice,Bachelor,4,494,51,True,"Khmer, English",2010,False
+UNI0037,University of Health Sciences,Public,Phnom Penh,Education,English Language Teaching,Bachelor,4,596,426,False,Khmer,2007,False
+UNI0038,University of Health Sciences,Public,Phnom Penh,Agriculture,Agricultural Economics,Bachelor,4,599,294,False,English,1970,False
+UNI0039,University of Health Sciences,Public,Phnom Penh,Tourism/Hospitality,Tourism Management,Bachelor,4,335,354,True,English,2015,False
+UNI0040,University of Health Sciences,Public,Phnom Penh,IT/Computer Science,Information Technology,Bachelor,4,596,354,True,English,1965,True
+UNI0041,University of Health Sciences,Public,Phnom Penh,IT/Computer Science,Information Technology,Master,2,771,386,False,English,1993,True
+UNI0042,University of Health Sciences,Public,Phnom Penh,Arts/Humanities,History,Bachelor,4,422,185,True,Khmer,2002,False
+UNI0043,University of Health Sciences,Public,Phnom Penh,Arts/Humanities,History,Master,2,945,203,True,"Khmer, English",2008,False
+UNI0044,National University of Management,Public,Phnom Penh,Engineering,Chemical Engineering,Master,2,550,228,True,Khmer,1983,True
+UNI0045,National University of Management,Public,Phnom Penh,Tourism/Hospitality,Culinary Arts,Master,2,1089,328,True,English,2011,False
+UNI0046,National University of Management,Public,Phnom Penh,IT/Computer Science,Network Engineering,Master,2,1165,389,True,Khmer,1976,True
+UNI0047,National University of Management,Public,Phnom Penh,Architecture,Architecture,Bachelor,4,439,194,False,Khmer,2005,False
+UNI0048,Royal University of Fine Arts,Public,Phnom Penh,Healthcare,Health Management,Bachelor,4,470,444,True,English,1976,True
+UNI0049,Royal University of Fine Arts,Public,Phnom Penh,Healthcare,Health Management,Doctorate,3,764,429,True,English,2005,True
+UNI0050,Royal University of Fine Arts,Public,Phnom Penh,Education,Educational Leadership,Bachelor,4,338,403,True,English,1962,False
+UNI0051,Royal University of Fine Arts,Public,Phnom Penh,Tourism/Hospitality,Culinary Arts,Master,2,547,71,True,"Khmer, English",2010,False
+UNI0052,Royal University of Fine Arts,Public,Phnom Penh,Business,Economics,Master,2,610,399,True,English,1966,True
+UNI0053,Royal University of Fine Arts,Public,Phnom Penh,Engineering,Mechanical Engineering,Bachelor,4,742,133,True,"Khmer, English",1961,True
+UNI0054,Royal University of Fine Arts,Public,Phnom Penh,Engineering,Mechanical Engineering,Master,2,586,427,True,"Khmer, English",2011,True
+UNI0055,Royal University of Fine Arts,Public,Phnom Penh,Law,International Law,Bachelor,4,495,496,True,"Khmer, English",1974,False
+UNI0056,Royal University of Fine Arts,Public,Phnom Penh,Law,International Law,Doctorate,3,804,468,True,"Khmer, English",1979,False
+UNI0057,Royal University of Fine Arts,Public,Phnom Penh,Architecture,Urban Planning,Bachelor,4,637,148,True,"Khmer, English",1977,False
+UNI0058,National Polytechnic Institute of Cambodia,Public,Phnom Penh,Education,Mathematics Education,Bachelor,4,749,183,True,English,1976,False
+UNI0059,National Polytechnic Institute of Cambodia,Public,Phnom Penh,Education,Mathematics Education,Master,2,478,105,False,"Khmer, English",1982,False
+UNI0060,National Polytechnic Institute of Cambodia,Public,Phnom Penh,Law,Business Law,Doctorate,3,994,345,True,"Khmer, English",1962,False
+UNI0061,National Polytechnic Institute of Cambodia,Public,Phnom Penh,Law,Business Law,Bachelor,4,662,273,True,English,2011,False
+UNI0062,National Polytechnic Institute of Cambodia,Public,Phnom Penh,Agriculture,Horticulture,Master,2,780,85,True,English,1980,False
+UNI0063,National Polytechnic Institute of Cambodia,Public,Phnom Penh,Arts/Humanities,Journalism,Master,2,838,208,True,"Khmer, English",1985,False
+UNI0064,University of Cambodia,Private,Phnom Penh,Education,Science Education,Bachelor,4,1831,330,True,"Khmer, English",1978,False
+UNI0065,University of Cambodia,Private,Phnom Penh,Education,Science Education,Master,2,2145,270,False,English,2001,False
+UNI0066,University of Cambodia,Private,Phnom Penh,Arts/Humanities,History,Master,2,3574,159,False,"Khmer, English",2010,False
+UNI0067,University of Cambodia,Private,Phnom Penh,Arts/Humanities,History,Bachelor,4,2845,457,True,English,1965,False
+UNI0068,University of Cambodia,Private,Phnom Penh,Business,Finance,Bachelor,4,2377,208,True,Khmer,1969,True
+UNI0069,University of Cambodia,Private,Phnom Penh,Business,Finance,Master,2,1575,73,True,"Khmer, English",1999,True
+UNI0070,University of Cambodia,Private,Phnom Penh,IT/Computer Science,Computer Science,Master,2,3706,406,True,"Khmer, English",1985,True
+UNI0071,University of Cambodia,Private,Phnom Penh,IT/Computer Science,Computer Science,Bachelor,4,1499,125,True,Khmer,2009,True
+UNI0072,University of Cambodia,Private,Phnom Penh,Healthcare,Public Health,Bachelor,4,2646,406,False,"Khmer, English",1963,True
+UNI0073,Paññāsāstra University of Cambodia,Private,Phnom Penh,Healthcare,Medical Laboratory Science,Master,2,4051,330,True,Khmer,2007,True
+UNI0074,Paññāsāstra University of Cambodia,Private,Phnom Penh,Healthcare,Medical Laboratory Science,Doctorate,3,5528,293,True,"Khmer, English",2008,True
+UNI0075,Paññāsāstra University of Cambodia,Private,Phnom Penh,IT/Computer Science,Information Technology,Master,2,2343,275,True,English,1978,True
+UNI0076,Paññāsāstra University of Cambodia,Private,Phnom Penh,IT/Computer Science,Information Technology,Bachelor,4,1480,189,True,"Khmer, English",1994,True
+UNI0077,Paññāsāstra University of Cambodia,Private,Phnom Penh,Tourism/Hospitality,Tourism Management,Bachelor,4,1473,246,True,English,1973,False
+UNI0078,Paññāsāstra University of Cambodia,Private,Phnom Penh,Arts/Humanities,Khmer Literature,Master,2,3166,288,True,Khmer,1973,False
+UNI0079,Paññāsāstra University of Cambodia,Private,Phnom Penh,Arts/Humanities,Khmer Literature,Bachelor,4,2705,265,True,English,2004,False
+UNI0080,Paññāsāstra University of Cambodia,Private,Phnom Penh,Architecture,Architecture,Master,2,4395,230,True,"Khmer, English",2014,False
+UNI0081,Paññāsāstra University of Cambodia,Private,Phnom Penh,Architecture,Architecture,Bachelor,4,2826,477,True,English,2007,False
+UNI0082,Build Bright University,Private,Phnom Penh,Arts/Humanities,Sociology,Bachelor,4,1688,392,True,English,1970,False
+UNI0083,Build Bright University,Private,Phnom Penh,Arts/Humanities,Sociology,Master,2,4081,289,True,English,1994,False
+UNI0084,Build Bright University,Private,Phnom Penh,Healthcare,Medicine,Doctorate,3,2342,379,True,Khmer,2015,True
+UNI0085,Build Bright University,Private,Phnom Penh,Healthcare,Medicine,Bachelor,4,1945,143,True,"Khmer, English",1984,True
+UNI0086,Build Bright University,Private,Phnom Penh,Tourism/Hospitality,Culinary Arts,Master,2,2503,222,True,"Khmer, English",2008,False
+UNI0087,Build Bright University,Private,Phnom Penh,IT/Computer Science,Data Science,Bachelor,4,1039,433,False,Khmer,1982,True
+UNI0088,Build Bright University,Private,Phnom Penh,IT/Computer Science,Data Science,Master,2,2188,382,True,English,1962,True
+UNI0089,Build Bright University,Private,Phnom Penh,Business,Economics,Bachelor,4,1408,479,True,English,1969,True
+UNI0090,Norton University,Private,Phnom Penh,Business,International Business,Master,2,3648,181,True,Khmer,1998,True
+UNI0091,Norton University,Private,Phnom Penh,Tourism/Hospitality,Travel & Tourism,Bachelor,4,2975,209,True,English,1961,False
+UNI0092,Norton University,Private,Phnom Penh,IT/Computer Science,Software Engineering,Master,2,1732,353,True,Khmer,2004,True
+UNI0093,Norton University,Private,Phnom Penh,IT/Computer Science,Software Engineering,Bachelor,4,2582,204,False,Khmer,2010,True
+UNI0094,Zaman University,Private,Phnom Penh,Engineering,Civil Engineering,Bachelor,4,2684,300,True,"Khmer, English",1983,True
+UNI0095,Zaman University,Private,Phnom Penh,Engineering,Civil Engineering,Master,2,3451,474,True,English,1969,True
+UNI0096,Zaman University,Private,Phnom Penh,Law,Criminal Justice,Doctorate,3,4136,383,True,English,2011,False
+UNI0097,Zaman University,Private,Phnom Penh,Agriculture,Horticulture,Master,2,4036,424,False,"Khmer, English",1980,False
+UNI0098,Zaman University,Private,Phnom Penh,Agriculture,Horticulture,Bachelor,4,2744,175,True,"Khmer, English",1988,False
+UNI0099,Zaman University,Private,Phnom Penh,Arts/Humanities,English Literature,Master,2,1587,303,True,Khmer,1991,False
+UNI0100,Zaman University,Private,Phnom Penh,Arts/Humanities,English Literature,Bachelor,4,1434,231,True,"Khmer, English",1977,False
+UNI0101,Zaman University,Private,Phnom Penh,Business,International Business,Bachelor,4,1175,173,True,"Khmer, English",1995,True
+UNI0102,Zaman University,Private,Phnom Penh,Business,International Business,Master,2,3828,173,True,English,2005,True
+UNI0103,Cambodian Mekong University,Private,Phnom Penh,Tourism/Hospitality,Hotel Management,Bachelor,4,2359,347,True,"Khmer, English",1995,False
+UNI0104,Cambodian Mekong University,Private,Phnom Penh,Tourism/Hospitality,Hotel Management,Master,2,3130,226,True,English,1995,False
+UNI0105,Cambodian Mekong University,Private,Phnom Penh,Engineering,Mechanical Engineering,Master,2,2440,178,True,Khmer,2006,True
+UNI0106,Cambodian Mekong University,Private,Phnom Penh,Engineering,Mechanical Engineering,Bachelor,4,1394,211,True,English,1994,True
+UNI0107,Cambodian Mekong University,Private,Phnom Penh,IT/Computer Science,Network Engineering,Bachelor,4,1443,428,True,"Khmer, English",2006,True
+UNI0108,Cambodian Mekong University,Private,Phnom Penh,Business,International Business,Bachelor,4,1606,166,True,Khmer,1979,True
+UNI0109,Cambodian Mekong University,Private,Phnom Penh,Business,International Business,Master,2,1542,412,False,Khmer,1977,True
+UNI0110,Western University,Private,Phnom Penh,Engineering,Industrial Engineering,Master,2,1815,496,True,English,1978,True
+UNI0111,Western University,Private,Phnom Penh,Arts/Humanities,Sociology,Master,2,2065,76,True,"Khmer, English",1967,False
+UNI0112,Western University,Private,Phnom Penh,Arts/Humanities,Sociology,Bachelor,4,2683,83,True,"Khmer, English",1964,False
+UNI0113,Western University,Private,Phnom Penh,Education,Mathematics Education,Bachelor,4,1305,465,False,"Khmer, English",1965,False
+UNI0114,Asia Euro University,Private,Phnom Penh,IT/Computer Science,Cybersecurity,Master,2,2883,276,True,English,1987,True
+UNI0115,Asia Euro University,Private,Phnom Penh,Arts/Humanities,History,Bachelor,4,2940,440,True,English,1973,False
+UNI0116,Asia Euro University,Private,Phnom Penh,Agriculture,Agricultural Economics,Bachelor,4,1491,138,False,Khmer,1970,False
+UNI0117,Angkor University,Public,Siem Reap,Agriculture,Agronomy,Master,2,991,194,True,Khmer,2003,False
+UNI0118,Angkor University,Public,Siem Reap,Tourism/Hospitality,Hotel Management,Bachelor,4,358,328,True,English,1969,False
+UNI0119,Angkor University,Public,Siem Reap,Tourism/Hospitality,Hotel Management,Master,2,1147,186,True,Khmer,1963,False
+UNI0120,Angkor University,Public,Siem Reap,Arts/Humanities,English Literature,Master,2,544,289,True,English,1985,False
+UNI0121,Angkor University,Public,Siem Reap,Arts/Humanities,English Literature,Bachelor,4,782,189,False,English,1991,False
+UNI0122,Angkor University,Public,Siem Reap,Business,Marketing,Bachelor,4,755,271,True,English,1976,True
+UNI0123,University of Battambang,Public,Battambang,IT/Computer Science,Network Engineering,Bachelor,4,540,315,True,"Khmer, English",1971,True
+UNI0124,University of Battambang,Public,Battambang,IT/Computer Science,Network Engineering,Master,2,898,273,True,Khmer,1990,True
+UNI0125,University of Battambang,Public,Battambang,Healthcare,Pharmacy,Master,2,964,103,True,"Khmer, English",1986,True
+UNI0126,University of Battambang,Public,Battambang,Healthcare,Pharmacy,Doctorate,3,1310,303,True,English,1985,True
+UNI0127,University of Battambang,Public,Battambang,Engineering,Chemical Engineering,Master,2,517,211,True,"Khmer, English",1967,True
+UNI0128,University of Battambang,Public,Battambang,Agriculture,Food Technology,Master,2,766,77,True,English,1983,False
+UNI0129,Mean Chey University,Public,Battambang,Tourism/Hospitality,Hotel Management,Master,2,543,64,False,Khmer,2005,False
+UNI0130,Mean Chey University,Public,Battambang,Tourism/Hospitality,Hotel Management,Bachelor,4,381,209,False,Khmer,1995,False
+UNI0131,Mean Chey University,Public,Battambang,Architecture,Landscape Architecture,Bachelor,4,730,108,True,Khmer,2001,False
+UNI0132,Mean Chey University,Public,Battambang,Engineering,Electrical Engineering,Master,2,768,477,True,"Khmer, English",1975,True
+UNI0133,Mean Chey University,Public,Battambang,Engineering,Electrical Engineering,Bachelor,4,533,332,True,"Khmer, English",1972,True
+UNI0134,Mean Chey University,Public,Battambang,IT/Computer Science,Cybersecurity,Bachelor,4,441,445,True,"Khmer, English",2010,True
+UNI0135,Mean Chey University,Public,Battambang,Business,International Business,Bachelor,4,671,202,False,English,2002,True
+UNI0136,Mean Chey University,Public,Battambang,Business,International Business,Master,2,825,493,True,"Khmer, English",1994,True
+UNI0137,Mean Chey University,Public,Battambang,Education,Educational Leadership,Master,2,799,214,True,English,1975,False
+UNI0138,Mean Chey University,Public,Battambang,Education,Educational Leadership,Bachelor,4,592,246,True,"Khmer, English",1962,False
+UNI0139,Preah Sihanouk University,Public,Sihanoukville,Tourism/Hospitality,Hotel Management,Bachelor,4,557,352,True,Khmer,2015,False
+UNI0140,Preah Sihanouk University,Public,Sihanoukville,Tourism/Hospitality,Hotel Management,Master,2,1098,275,True,English,1989,False
+UNI0141,Preah Sihanouk University,Public,Sihanoukville,Agriculture,Agronomy,Master,2,1117,385,True,Khmer,1990,False
+UNI0142,Preah Sihanouk University,Public,Sihanoukville,Arts/Humanities,Media Studies,Master,2,948,91,True,English,2014,False
+UNI0143,Preah Sihanouk University,Public,Sihanoukville,Arts/Humanities,Media Studies,Bachelor,4,573,244,True,English,2005,False
+UNI0144,Preah Sihanouk University,Public,Sihanoukville,Law,Criminal Justice,Doctorate,3,670,170,True,Khmer,2007,False
+UNI0145,Preah Sihanouk University,Public,Sihanoukville,Architecture,Architecture,Bachelor,4,527,135,True,Khmer,1962,False
+UNI0146,Preah Sihanouk University,Public,Sihanoukville,Architecture,Architecture,Master,2,699,457,True,"Khmer, English",1982,False
+UNI0147,University of Kampong Cham,Public,Kampong Cham,Agriculture,Horticulture,Bachelor,4,389,90,False,"Khmer, English",1999,False
+UNI0148,University of Kampong Cham,Public,Kampong Cham,Business,Management,Master,2,1150,348,True,Khmer,1989,True
+UNI0149,University of Kampong Cham,Public,Kampong Cham,Healthcare,Medical Laboratory Science,Master,2,961,54,True,"Khmer, English",2003,True
+UNI0150,University of Kampong Cham,Public,Kampong Cham,Healthcare,Medical Laboratory Science,Doctorate,3,1158,130,True,"Khmer, English",1982,True
+UNI0151,University of Kampong Cham,Public,Kampong Cham,Education,Mathematics Education,Master,2,799,482,True,Khmer,1984,False
+UNI0152,University of Kampong Cham,Public,Kampong Cham,Education,Mathematics Education,Bachelor,4,736,297,True,Khmer,1984,False
+UNI0153,University of Kampong Cham,Public,Kampong Cham,Tourism/Hospitality,Travel & Tourism,Master,2,466,474,True,"Khmer, English",1960,False
+UNI0154,University of Kampong Cham,Public,Kampong Cham,Tourism/Hospitality,Travel & Tourism,Bachelor,4,589,492,True,English,2007,False
+UNI0155,Svay Rieng University,Public,Svay Rieng,Education,Secondary Education,Bachelor,4,762,371,True,"Khmer, English",2010,False
+UNI0156,Svay Rieng University,Public,Svay Rieng,Education,Secondary Education,Master,2,787,67,False,"Khmer, English",2006,False
+UNI0157,Svay Rieng University,Public,Svay Rieng,Healthcare,Nursing,Master,2,700,432,True,Khmer,1972,True
+UNI0158,Svay Rieng University,Public,Svay Rieng,Law,International Law,Doctorate,3,1450,134,True,"Khmer, English",2011,False
+UNI0159,Svay Rieng University,Public,Svay Rieng,Law,International Law,Master,2,676,432,True,Khmer,1989,False
+UNI0160,Svay Rieng University,Public,Svay Rieng,IT/Computer Science,Computer Science,Bachelor,4,740,396,True,English,1983,True
+UNI0161,Svay Rieng University,Public,Svay Rieng,Tourism/Hospitality,Tourism Management,Bachelor,4,574,113,True,"Khmer, English",2003,False
+UNI0162,Svay Rieng University,Public,Svay Rieng,Tourism/Hospitality,Tourism Management,Master,2,1024,394,True,English,1984,False
+UNI0163,Kampong Thom University,Public,Kampong Thom,Law,Business Law,Doctorate,3,664,375,True,English,1979,False
+UNI0164,Kampong Thom University,Public,Kampong Thom,IT/Computer Science,Network Engineering,Bachelor,4,323,69,True,"Khmer, English",1967,True
+UNI0165,Kampong Thom University,Public,Kampong Thom,IT/Computer Science,Network Engineering,Master,2,523,170,False,Khmer,1984,True
+UNI0166,Kampong Thom University,Public,Kampong Thom,Healthcare,Public Health,Doctorate,3,1200,430,True,"Khmer, English",2001,True
+UNI0167,Kampong Thom University,Public,Kampong Thom,Healthcare,Public Health,Master,2,525,476,True,English,1986,True
+UNI0168,Kampong Thom University,Public,Kampong Thom,Tourism/Hospitality,Culinary Arts,Master,2,616,277,True,Khmer,2014,False
+UNI0169,Kampong Thom University,Public,Kampong Thom,Engineering,Mechanical Engineering,Master,2,867,380,True,Khmer,1985,True
+UNI0170,Kampong Thom University,Public,Kampong Thom,Education,English Language Teaching,Bachelor,4,785,484,True,Khmer,2002,False
