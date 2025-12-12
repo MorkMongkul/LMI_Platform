@@ -202,3 +202,24 @@ class Program(db.Model):
         }
 
 
+if __name__ == '__main__':
+    from flask import Flask
+    from config import Config
+    
+    app = Flask(__name__)
+    app.config.from_object(Config)
+    db.init_app(app)
+    
+    with app.app_context():
+        print("Creating database tables...")
+        db.create_all()
+        print("✓ All tables created successfully!")
+        print("\nTables created:")
+        print("  - companies")
+        print("  - jobs")
+        print("  - skills")
+        print("  - job_skills (association table)")
+        print("  - universities")
+        print("  - programs")
+        print("  - program_skills (association table)")
+        print("\nNext step: Run data_engineering.ipynb to seed data")
