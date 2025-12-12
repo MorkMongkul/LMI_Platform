@@ -1,0 +1,172 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "LMI Platform API",
+    "description": "API for Labor Market Information Platform",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:5001"
+    }
+  ],
+  "components": {
+    "schemas": {
+      "Job": {
+        "type": "object",
+        "properties": {
+          "id": {"type": "string"},
+          "title": {"type": "string"},
+          "company": {"type": "string"},
+          "location": {"type": "string"},
+          "salary_min": {"type": "number"},
+          "salary_max": {"type": "number"},
+          "skills": {
+            "type": "array",
+            "items": {"type": "string"}
+          }
+        }
+      }
+    }
+  },
+  "paths": {
+    "/api/jobs": {
+      "get": {
+        "summary": "List all jobs",
+        "parameters": [
+          {"name": "page", "in": "query", "schema": {"type": "integer"}},
+          {"name": "search", "in": "query", "schema": {"type": "string"}},
+          {"name": "location", "in": "query", "schema": {"type": "string"}},
+          {"name": "industry", "in": "query", "schema": {"type": "string"}},
+          {"name": "skill", "in": "query", "schema": {"type": "string"}}
+        ],
+        "responses": {
+          "200": {
+            "description": "List of jobs",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "success": {"type": "boolean"},
+                    "data": {
+                      "type": "array",
+                      "items": {"$ref": "#/components/schemas/Job"}
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/jobs/{id}": {
+      "get": {
+        "summary": "Get job details",
+        "parameters": [
+          {"name": "id", "in": "path", "required": true, "schema": {"type": "string"}}
+        ],
+        "responses": {
+          "200": {
+            "description": "Job details"
+          },
+          "404": {
+            "description": "Job not found"
+          }
+        }
+      }
+    },
+    "/api/skills": {
+      "get": {
+        "summary": "List all skills",
+        "parameters": [
+          {"name": "search", "in": "query", "schema": {"type": "string"}},
+          {"name": "type", "in": "query", "schema": {"type": "string", "enum": ["Technical", "Soft", "Language"]}}
+        ],
+        "responses": {
+          "200": {
+            "description": "List of skills"
+          }
+        }
+      }
+    },
+    "/api/skills/top": {
+      "get": {
+        "summary": "Get top in-demand skills",
+        "parameters": [
+          {"name": "limit", "in": "query", "schema": {"type": "integer"}}
+        ],
+        "responses": {
+          "200": {
+            "description": "List of top skills"
+          }
+        }
+      }
+    },
+    "/api/universities": {
+      "get": {
+        "summary": "List all universities",
+        "parameters": [
+          {"name": "search", "in": "query", "schema": {"type": "string"}},
+          {"name": "location", "in": "query", "schema": {"type": "string"}}
+        ],
+        "responses": {
+          "200": {
+            "description": "List of universities"
+          }
+        }
+      }
+    },
+    "/api/programs": {
+      "get": {
+        "summary": "List all programs",
+        "parameters": [
+            {"name": "category", "in": "query", "schema": {"type": "string"}},
+            {"name": "degree", "in": "query", "schema": {"type": "string"}},
+            {"name": "max_tuition", "in": "query", "schema": {"type": "number"}}
+        ],
+        "responses": {
+            "200": {
+                "description": "List of programs"
+            }
+        }
+      }
+    },
+    "/api/match/jobs": {
+        "post": {
+            "summary": "Match user skills to jobs",
+            "requestBody": {
+                "required": true,
+                "content": {
+                    "application/json": {
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "skills": {"type": "array", "items": {"type": "string"}},
+                                "experience_level": {"type": "string"},
+                                "location": {"type": "string"}
+                            }
+                        }
+                    }
+                }
+            },
+            "responses": {
+                "200": {
+                    "description": "Matched jobs with score"
+                }
+            }
+        }
+    },
+    "/api/analytics/overview": {
+        "get": {
+            "summary": "Get platform overview stats",
+            "responses": {
+                "200": {
+                    "description": "Overview stats"
+                }
+            }
+        }
+    }
+  }
+}
