@@ -175,7 +175,7 @@ const AuthModal = ({ isOpen, onClose }) => {
 
                                         {/* Signup Form */}
                                         {activeTab === 'signup' && (
-                                                <form className="auth-form" onSubmit={handleSignupSubmit}>
+                                                <form className="auth-form active" onSubmit={handleSignupSubmit}>
                                                         <div className="form-group">
                                                                 <label htmlFor="signupName">Full Name *</label>
                                                                 <input
@@ -304,9 +304,6 @@ const AuthModal = ({ isOpen, onClose }) => {
                                                         </div>
                                                 </form>
                                         )}
-
-
-
                                 </div>
                         </div>
                 </div>

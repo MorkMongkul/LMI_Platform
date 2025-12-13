@@ -10,20 +10,42 @@
         justify-content: center;
         align-items: center;
         animation: fadeIn 0.3s ease;
+        backdrop-filter: blur(5px);
+        /* Added backdrop blur */
 }
 
 .auth-modal.active {
         display: flex;
 }
 
+/* Prevent body scrolling when modal is open */
+body.modal-open {
+        overflow: hidden;
+}
+
+/* Make modal container scrollable with max height - UPDATED WIDTH */
 .auth-container {
         background-color: white;
         border-radius: 20px;
         width: 90%;
-        max-width: 420px;
+        max-width: 550px;
+        /* Increased from 420px to 550px */
+        max-height: 90vh;
+        /* Limit height to 90% of viewport */
         overflow: hidden;
+        /* Hide overflow from container */
         box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
         animation: slideUp 0.4s ease;
+        display: flex;
+        flex-direction: column;
+}
+
+/* For larger screens, make it even wider */
+@media (min-width: 1024px) {
+        .auth-container {
+                max-width: 600px;
+                /* Even wider on desktop */
+        }
 }
 
 .auth-header {
@@ -79,8 +101,34 @@
         background-color: #f5f9ff;
 }
 
+/* Make auth content scrollable */
 .auth-content {
         padding: 25px;
+        overflow-y: auto;
+        /* Enable vertical scrolling */
+        flex: 1;
+        /* Take available space */
+        max-height: 60vh;
+        /* Limit content height */
+}
+
+/* Custom scrollbar styling */
+.auth-content::-webkit-scrollbar {
+        width: 6px;
+}
+
+.auth-content::-webkit-scrollbar-track {
+        background: #f1f1f1;
+        border-radius: 10px;
+}
+
+.auth-content::-webkit-scrollbar-thumb {
+        background: #c1c1c1;
+        border-radius: 10px;
+}
+
+.auth-content::-webkit-scrollbar-thumb:hover {
+        background: #a8a8a8;
 }
 
 .auth-form {
@@ -137,6 +185,17 @@
         background: linear-gradient(135deg, #004a9e 0%, #0069d9 100%);
         transform: translateY(-2px);
         box-shadow: 0 5px 15px rgba(0, 87, 184, 0.2);
+}
+
+.auth-button:disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
+}
+
+.auth-button:disabled:hover {
+        transform: none;
+        box-shadow: none;
+        background: linear-gradient(135deg, #0057b8 0%, #007bff 100%);
 }
 
 .auth-divider {
@@ -279,6 +338,36 @@
         text-decoration: underline;
 }
 
+/* Validation styles */
+.text-error {
+        color: #dc3545;
+        font-size: 0.85rem;
+        display: block;
+        margin-top: 5px;
+}
+
+.password-strength {
+        margin-top: 8px;
+}
+
+.strength-bar {
+        height: 4px;
+        background: #ddd;
+        border-radius: 2px;
+        margin-bottom: 4px;
+        overflow: hidden;
+}
+
+.strength-bar.weak {
+        background: linear-gradient(90deg, #dc3545 0%, #dc3545 50%, #ddd 50%);
+        width: 50%;
+}
+
+.strength-bar.strong {
+        background: #28a745;
+        width: 100%;
+}
+
 @keyframes fadeIn {
         from {
                 opacity: 0;
@@ -301,13 +390,71 @@
         }
 }
 
+/* Responsive adjustments */
 @media (max-width: 768px) {
         .auth-container {
                 width: 95%;
-                max-width: 380px;
+                max-width: 450px;
+                /* Adjusted for mobile */
+                max-height: 85vh;
+                /* Slightly smaller on mobile */
         }
 
         .auth-content {
                 padding: 20px;
+                max-height: 55vh;
+                /* Adjust for mobile */
+        }
+
+        .auth-header {
+                padding: 20px;
+        }
+
+        .auth-header h2 {
+                font-size: 1.6rem;
+        }
+
+        .auth-tab {
+                padding: 16px;
+                font-size: 1rem;
+        }
+
+        .form-control {
+                padding: 12px 14px;
+        }
+
+        .auth-button {
+                padding: 13px;
+        }
+}
+
+@media (max-width: 480px) {
+        .auth-container {
+                max-width: 400px;
+                /* Slightly smaller on very small screens */
+                border-radius: 15px;
+        }
+
+        .auth-header {
+                padding: 18px;
+        }
+
+        .auth-header h2 {
+                font-size: 1.5rem;
+        }
+
+        .close-modal {
+                font-size: 1.6rem;
+                top: 12px;
+                right: 15px;
+        }
+
+        .auth-content {
+                padding: 18px;
+        }
+
+        .social-login {
+                flex-direction: column;
+                gap: 10px;
         }
 }
