@@ -14,11 +14,11 @@
 
 .stat-item {
         flex: 1;
-        min-width: 200px;
+        min-width: 150px;
 }
 
 .stat-number {
-        font-size: 3.5rem;
+        font-size: 3rem;
         font-weight: bold;
         color: #ffd700;
 }
@@ -36,6 +36,6 @@
         }
 
         .stat-number {
-                font-size: 2.8rem;
+                font-size: 2rem;
         }
 }

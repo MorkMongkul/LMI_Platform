@@ -8,19 +8,9 @@ const Footer = () => {
                                 <div className="footer-column">
                                         <h3>CLMI Platform</h3>
                                         <p>Cambodia Labor Market Intelligence Platform—bridging education and employment through data.</p>
-                                        <p><i className="fas fa-users"></i> Group 16 – Project Management</p>
-                                        <p><i className="fas fa-chalkboard-teacher"></i> Instructor: TOUCH Sopheak</p>
+
                                 </div>
-                                <div className="footer-column">
-                                        <h3>Quick Links</h3>
-                                        <ul>
-                                                <li><a href="#home">Home</a></li>
-                                                <li><a href="#dashboard">Dashboard</a></li>
-                                                <li><a href="#chatbot">AI Chatbot</a></li>
-                                                <li><a href="#universities">For Universities</a></li>
-                                                <li><a href="#policymakers">For Policymakers</a></li>
-                                        </ul>
-                                </div>
+
                                 <div className="footer-column">
                                         <h3>Contact & Support</h3>
                                         <ul>
@@ -29,9 +19,19 @@ const Footer = () => {
                                                 <li><i className="fas fa-calendar"></i> MVP Launch: Week 13, 2025</li>
                                         </ul>
                                 </div>
+                                <div className="footer-column">
+                                        <h3>Our Member</h3>
+                                        <ul>
+                                                <li>MORK Mongkul</li>
+                                                <li>PHALLY Makara</li>
+                                                <li>HOUN Sithai</li>
+                                                <li>PICH Daraphal</li>
+                                                <li>ING Vitouratanak</li>
+                                        </ul>
+                                </div>
                         </div>
                         <div className="copyright">
-                                <p>&copy; 2025 Cambodia Labor Market Intelligence Platform (CLMI). All rights reserved. | Project Proposal – Group 16</p>
+                                <p>&copy; 2025 Cambodia Labor Market Intelligence Platform (CLMI). All rights reserved.</p>
                         </div>
                 </footer>
         );

@@ -5,7 +5,7 @@ const Stats = () => {
         const stats = [
                 { number: "10,000+", label: "Job Postings Analyzed" },
                 { number: "100+", label: "University Programs Mapped" },
-                { number: "AI-Powered", label: "Skill Recommendations" },
+                { number: "Chat-bot", label: "Skill Recommendations" },
                 { number: "Real-Time", label: "Market Analytics" }
         ];
 

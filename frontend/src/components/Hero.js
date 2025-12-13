@@ -6,7 +6,7 @@ const Hero = ({ openAuthModal }) => {
                 <section className="hero" id="home">
                         <div className="container hero-container">
                                 <div className="hero-content">
-                                        <h2>Find Your Perfect Career Path With AI-Powered Insights</h2>
+                                        <h2>Find Your Career Path With Chat-bot and CLMI Insights</h2>
                                         <p>The Cambodia Labor Market Intelligence Platform (CLMI) bridges the gap between education and employment by providing data-driven insights on job demand, skill trends, and educational alignment.</p>
                                         <button className="cta-button" onClick={openAuthModal}>
                                                 Explore Dashboard <i className="fas fa-arrow-right"></i>

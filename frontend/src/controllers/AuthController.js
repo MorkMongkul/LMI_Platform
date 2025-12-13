@@ -31,9 +31,9 @@ export class AuthController {
                 };
         }
 
-        static async signup(name, email, password, agreeTerms) {
+        static async signup(name, email, userType, password, agreeTerms) {
                 // Simple validation
-                if (!name || !email || !password) {
+                if (!name || !email || !userType || !password) {
                         return {
                                 success: false,
                                 user: null,
@@ -72,7 +72,7 @@ export class AuthController {
                                 id: 'demo-user-' + Date.now(),
                                 name: name,
                                 email: email,
-                                role: 'user',
+                                role: userType, // Use the selected user type
                                 createdAt: new Date()
                         },
                         message: 'Account created successfully (Demo Mode)'
