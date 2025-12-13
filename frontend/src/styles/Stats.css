@@ -1,0 +1,41 @@
+.stats {
+        background-color: #0057b8;
+        color: white;
+        padding: 60px 0;
+        text-align: center;
+}
+
+.stats-container {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        gap: 30px;
+}
+
+.stat-item {
+        flex: 1;
+        min-width: 200px;
+}
+
+.stat-number {
+        font-size: 3.5rem;
+        font-weight: bold;
+        color: #ffd700;
+}
+
+.stat-label {
+        font-size: 1.2rem;
+        margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+        .stats-container {
+                flex-direction: column;
+                align-items: center;
+                gap: 40px;
+        }
+
+        .stat-number {
+                font-size: 2.8rem;
+        }
+}
