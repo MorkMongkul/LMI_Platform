@@ -10,7 +10,7 @@ const Sidebar = () => {
                 {
                         path: '/dashboard/jobs',
                         icon: 'fas fa-briefcase',
-                        label: 'Jobs',
+                        label: 'new jobs',
                         color: '#0057b8'
                 },
                 {
@@ -22,13 +22,13 @@ const Sidebar = () => {
                 {
                         path: '/dashboard/skills',
                         icon: 'fas fa-tools',
-                        label: 'Skills',
+                        label: 'Skills analysis',
                         color: '#ffc107'
                 },
                 {
                         path: '/dashboard/university',
                         icon: 'fas fa-university',
-                        label: 'University',
+                        label: 'University match',
                         color: '#dc3545'
                 },
         ];
