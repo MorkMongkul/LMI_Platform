@@ -23,4 +23,7 @@ const Header = ({ openAuthModal }) => {
         );
 };
 
+
+
 export default Header;
+

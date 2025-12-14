@@ -1,43 +1,56 @@
 import React, { useState } from 'react';
-import { AuthController } from '../controllers/AuthController';
 import './Modal.css';
 
-const AuthModal = ({ isOpen, onClose }) => {
+const AuthModal = ({ isOpen, onClose, onLoginSuccess }) => {
         const [activeTab, setActiveTab] = useState('login');
         const [loginData, setLoginData] = useState({ email: '', password: '' });
         const [signupData, setSignupData] = useState({
                 name: '',
                 email: '',
-                userType: '',
                 password: '',
                 confirmPassword: ''
         });
         const [rememberMe, setRememberMe] = useState(false);
         const [agreeTerms, setAgreeTerms] = useState(false);
 
-        //Handle Login Section
-        const handleLoginSubmit = async (e) => {
+        const handleLoginSubmit = (e) => {
                 e.preventDefault();
-                const result = await AuthController.login(loginData.email, loginData.password, rememberMe);
-                if (result.success) {
-                        alert(`Login successful! Welcome ${result.user.name}`);
-                        onClose();
-                        setLoginData({ email: '', password: '' });
-                } else {
-                        alert(result.message);
-                }
-        };
-        // Handle SignUp Section
-        const handleSignupSubmit = async (e) => {
-                e.preventDefault();
-                // Validate all fields
-                if (signupData.password !== signupData.confirmPassword) {
-                        alert('Passwords do not match!');
+                // Simple validation
+                if (!loginData.email || !loginData.password) {
+                        alert('Please enter email and password');
                         return;
                 }
 
-                if (!signupData.userType) {
-                        alert('Please select your role');
+                // Simulate login - always succeeds
+                const user = {
+                        id: 'user-' + Date.now(),
+                        name: loginData.email.split('@')[0],
+                        email: loginData.email,
+                        role: 'user'
+                };
+
+                // Store in localStorage
+                localStorage.setItem('clmi_user', JSON.stringify(user));
+
+                alert(`Login successful! Welcome ${user.name}`);
+                onClose();
+                setLoginData({ email: '', password: '' });
+
+                // Call success callback
+                if (onLoginSuccess) onLoginSuccess(user);
+        };
+
+        const handleSignupSubmit = (e) => {
+                e.preventDefault();
+
+                // Simple validation
+                if (!signupData.name || !signupData.email || !signupData.password) {
+                        alert('Please fill all fields');
+                        return;
+                }
+
+                if (signupData.password !== signupData.confirmPassword) {
+                        alert('Passwords do not match!');
                         return;
                 }
 
@@ -46,44 +59,24 @@ const AuthModal = ({ isOpen, onClose }) => {
                         return;
                 }
 
-                if (signupData.password.length < 6) {
-                        alert('Password must be at least 6 characters');
-                        return;
-                }
+                // Simulate signup - always succeeds
+                const user = {
+                        id: 'user-' + Date.now(),
+                        name: signupData.name,
+                        email: signupData.email,
+                        role: 'user'
+                };
 
-                // Show loading state
-                const submitBtn = e.target.querySelector('.auth-button');
-                const originalText = submitBtn.textContent;
-                submitBtn.textContent = 'Creating Account...';
-                submitBtn.disabled = true;
+                // Store in localStorage
+                localStorage.setItem('clmi_user', JSON.stringify(user));
 
-                const result = await AuthController.signup(
-                        signupData.name,
-                        signupData.email,
-                        signupData.userType, // Pass userType
-                        signupData.password,
-                        agreeTerms
-                );
+                alert(`Account created successfully! Welcome ${user.name}`);
+                onClose();
+                setSignupData({ name: '', email: '', password: '', confirmPassword: '' });
+                setAgreeTerms(false);
 
-                // Reset button
-                submitBtn.textContent = originalText;
-                submitBtn.disabled = false;
-
-                if (result.success) {
-                        alert(`Account created successfully!\n\nWelcome ${result.user.name}!\nEmail: ${result.user.email}\nRole: ${result.user.role}\n\nYou can now login to access CLMI features.`);
-                        onClose();
-                        setActiveTab('login');
-                        setSignupData({
-                                name: '',
-                                email: '',
-                                userType: '',
-                                password: '',
-                                confirmPassword: ''
-                        });
-                        setAgreeTerms(false);
-                } else {
-                        alert(`${result.message}`);
-                }
+                // Call success callback
+                if (onLoginSuccess) onLoginSuccess(user);
         };
 
         if (!isOpen) return null;
@@ -175,9 +168,9 @@ const AuthModal = ({ isOpen, onClose }) => {
 
                                         {/* Signup Form */}
                                         {activeTab === 'signup' && (
-                                                <form className="auth-form active" onSubmit={handleSignupSubmit}>
+                                                <form className="auth-form" onSubmit={handleSignupSubmit}>
                                                         <div className="form-group">
-                                                                <label htmlFor="signupName">Full Name *</label>
+                                                                <label htmlFor="signupName">Full Name</label>
                                                                 <input
                                                                         type="text"
                                                                         id="signupName"
@@ -187,13 +180,10 @@ const AuthModal = ({ isOpen, onClose }) => {
                                                                         onChange={(e) => setSignupData({ ...signupData, name: e.target.value })}
                                                                         required
                                                                 />
-                                                                {signupData.name && signupData.name.length < 2 && (
-                                                                        <small className="text-error">Name must be at least 2 characters</small>
-                                                                )}
                                                         </div>
 
                                                         <div className="form-group">
-                                                                <label htmlFor="signupEmail">Email Address *</label>
+                                                                <label htmlFor="signupEmail">Email Address</label>
                                                                 <input
                                                                         type="email"
                                                                         id="signupEmail"
@@ -203,51 +193,23 @@ const AuthModal = ({ isOpen, onClose }) => {
                                                                         onChange={(e) => setSignupData({ ...signupData, email: e.target.value })}
                                                                         required
                                                                 />
-                                                                {signupData.email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(signupData.email) && (
-                                                                        <small className="text-error">Please enter a valid email</small>
-                                                                )}
                                                         </div>
 
                                                         <div className="form-group">
-                                                                <label htmlFor="userType">I am a *</label>
-                                                                <select
-                                                                        id="userType"
-                                                                        className="form-control"
-                                                                        value={signupData.userType}
-                                                                        onChange={(e) => setSignupData({ ...signupData, userType: e.target.value })}
-                                                                        required
-                                                                >
-                                                                        <option value="">Select your role</option>
-                                                                        <option value="student">Student / Job Seeker</option>
-                                                                        <option value="university">University Staff</option>
-                                                                        <option value="employer">Employer / HR Professional</option>
-                                                                        <option value="policymaker">Policy Maker / Researcher</option>
-                                                                </select>
-                                                        </div>
-
-                                                        <div className="form-group">
-                                                                <label htmlFor="signupPassword">Password *</label>
+                                                                <label htmlFor="signupPassword">Password</label>
                                                                 <input
                                                                         type="password"
                                                                         id="signupPassword"
                                                                         className="form-control"
-                                                                        placeholder="Create a strong password (min. 6 characters)"
+                                                                        placeholder="Create a strong password"
                                                                         value={signupData.password}
                                                                         onChange={(e) => setSignupData({ ...signupData, password: e.target.value })}
                                                                         required
                                                                 />
-                                                                <div className="password-strength">
-                                                                        {signupData.password && (
-                                                                                <>
-                                                                                        <div className={`strength-bar ${signupData.password.length >= 6 ? 'strong' : 'weak'}`}></div>
-                                                                                        <small>{signupData.password.length >= 6 ? '✓ Strong password' : 'Password should be at least 6 characters'}</small>
-                                                                                </>
-                                                                        )}
-                                                                </div>
                                                         </div>
 
                                                         <div className="form-group">
-                                                                <label htmlFor="confirmPassword">Confirm Password *</label>
+                                                                <label htmlFor="confirmPassword">Confirm Password</label>
                                                                 <input
                                                                         type="password"
                                                                         id="confirmPassword"
@@ -257,36 +219,22 @@ const AuthModal = ({ isOpen, onClose }) => {
                                                                         onChange={(e) => setSignupData({ ...signupData, confirmPassword: e.target.value })}
                                                                         required
                                                                 />
-                                                                {signupData.confirmPassword && signupData.password !== signupData.confirmPassword && (
-                                                                        <small className="text-error">Passwords do not match</small>
-                                                                )}
                                                         </div>
 
-                                                        <div className="form-group">
-                                                                <div className="terms-checkbox">
-                                                                        <input
-                                                                                type="checkbox"
-                                                                                id="agreeTerms"
-                                                                                checked={agreeTerms}
-                                                                                onChange={(e) => setAgreeTerms(e.target.checked)}
-                                                                                required
-                                                                        />
-                                                                        <label htmlFor="agreeTerms">
-                                                                                I agree to the <a href="#terms" onClick={(e) => e.preventDefault()}>Terms of Service</a> and <a href="#privacy" onClick={(e) => e.preventDefault()}>Privacy Policy</a> *
-                                                                        </label>
-                                                                </div>
-                                                                {!agreeTerms && signupData.name && (
-                                                                        <small className="text-error">You must agree to the terms and conditions</small>
-                                                                )}
+                                                        <div className="terms-checkbox">
+                                                                <input
+                                                                        type="checkbox"
+                                                                        id="agreeTerms"
+                                                                        checked={agreeTerms}
+                                                                        onChange={(e) => setAgreeTerms(e.target.checked)}
+                                                                        required
+                                                                />
+                                                                <label htmlFor="agreeTerms">
+                                                                        I agree to the <a href="#terms" onClick={(e) => e.preventDefault()}>Terms of Service</a> and <a href="#privacy" onClick={(e) => e.preventDefault()}>Privacy Policy</a>
+                                                                </label>
                                                         </div>
 
-                                                        <button
-                                                                type="submit"
-                                                                className="auth-button"
-                                                                disabled={!agreeTerms || signupData.password !== signupData.confirmPassword}
-                                                        >
-                                                                Create Account
-                                                        </button>
+                                                        <button type="submit" className="auth-button">Create Account</button>
 
                                                         <div className="auth-divider">or sign up with</div>
 
