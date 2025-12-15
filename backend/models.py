@@ -222,4 +222,3 @@ if __name__ == '__main__':
         print("  - universities")
         print("  - programs")
         print("  - program_skills (association table)")
-        print("\nNext step: Run data_engineering.ipynb to seed data")

@@ -1,8 +1,8 @@
 # Data Folder
 
-This folder contains all data files used by the CLMI Platform backend.
+This folder contains all data files used by the LMI Platform backend.
 
-## 📁 Structure
+##  Structure
 
 ### Raw Data Files
 - `ai_job_dataset.csv` - Main AI jobs dataset with 15,000+ job postings
@@ -14,14 +14,14 @@ This folder contains all data files used by the CLMI Platform backend.
 ### Scripts
 - Future: `data_import.py`, `data_cleaning.py`
 
-## 📊 Current Data
+##  Current Data
 
 **AI Jobs Dataset (`ai_job_dataset.csv`)**:
 - **Records**: 15,001 job postings
 - **Fields**: job_id, job_title, salary_usd, experience_level, company info, skills, etc.
 - **Source**: AI job market data for analysis and platform features
 
-## 🚀 Usage
+##  Usage
 
 This data will be used for:
 - Database seeding during development
@@ -30,7 +30,7 @@ This data will be used for:
 - Market analytics and insights
 - Educational pathway mapping
 
-## 📝 Notes
+##  Notes
 
 - All CSV files should include headers
 - Data validation scripts should be added here
