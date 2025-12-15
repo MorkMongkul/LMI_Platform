@@ -1,0 +1,215 @@
+/* University Page Specific Styles */
+
+.university-type-badge {
+        display: inline-block;
+        padding: 4px 12px;
+        border-radius: 20px;
+        color: white;
+        font-size: 0.75rem;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 0.3px;
+        margin-top: 5px;
+}
+
+/* Compact Filter Layout */
+.compact-filters {
+        flex: 1;
+        min-width: 0;
+}
+
+.compact-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        margin-bottom: 0;
+}
+
+.compact-filter {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        background: #f8f9fa;
+        padding: 6px 10px;
+        border-radius: 8px;
+        border: 2px solid #e9ecef;
+        transition: all 0.3s;
+        min-width: 0;
+        width: 100%;
+}
+
+.compact-filter:hover {
+        border-color: #0057b8;
+        box-shadow: 0 2px 8px rgba(0, 87, 184, 0.1);
+}
+
+.compact-filter i {
+        color: #0057b8;
+        font-size: 0.8rem;
+        min-width: 16px;
+}
+
+.compact-select {
+        border: none;
+        background: transparent;
+        color: #495057;
+        font-size: 0.8rem;
+        font-weight: 400;
+        outline: none;
+        cursor: pointer;
+        width: 100%;
+        padding: 2px 0;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+}
+
+.compact-select:focus {
+        outline: none;
+}
+
+.compact-select option {
+        padding: 6px;
+        background: white;
+        color: #333;
+        font-size: 0.8rem;
+}
+
+/* Adjust filter section layout */
+.filter-section {
+        display: flex;
+        gap: 15px;
+        align-items: flex-start;
+        width: 100%;
+}
+
+.combined-filter-group {
+        flex: 2;
+        min-width: 0;
+}
+
+.sort-group {
+        flex: 1;
+        min-width: 140px;
+        max-width: 160px;
+}
+
+/* University specific meta items */
+.skill-meta .meta-item strong {
+        font-weight: 600;
+}
+
+/* Responsive adjustments for university cards */
+@media (max-width: 768px) {
+        .skill-meta {
+                flex-direction: column;
+                gap: 10px;
+        }
+
+        .meta-item {
+                width: 100%;
+                justify-content: space-between;
+        }
+
+        .filter-section {
+                flex-direction: column;
+                gap: 10px;
+        }
+
+        .compact-row {
+                grid-template-columns: 1fr;
+                gap: 8px;
+        }
+
+        .combined-filter-group,
+        .sort-group {
+                width: 100%;
+                max-width: none;
+                min-width: auto;
+        }
+
+        .sort-options {
+                flex-direction: row;
+                justify-content: flex-start;
+        }
+
+        .sort-btn {
+                width: auto;
+                flex: 1;
+                min-width: 120px;
+        }
+}
+
+/* University icons */
+.skill-id .fa-id-card {
+        color: #6c757d;
+        font-size: 0.8rem;
+        margin-right: 5px;
+}
+
+/* Program density indicators */
+.skill-meta .meta-item i.fa-chart-line {
+        color: #0057b8;
+}
+
+.skill-meta .meta-item i.fa-building {
+        color: #6c757d;
+}
+
+/* Additional responsive styles */
+@media (max-width: 480px) {
+        .skill-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+        }
+
+        .job-count {
+                align-items: flex-start;
+                text-align: left;
+        }
+
+        .skill-meta {
+                gap: 12px;
+        }
+
+        .compact-filter {
+                padding: 8px 10px;
+        }
+
+        .compact-select {
+                font-size: 0.85rem;
+        }
+
+        .sort-options {
+                flex-direction: column;
+        }
+
+        .sort-btn {
+                width: 100%;
+                min-width: auto;
+        }
+}
+
+@media (max-width: 1024px) {
+        .compact-row {
+                grid-template-columns: 1fr 1fr;
+                gap: 8px;
+        }
+
+        .compact-filter {
+                min-width: 150px;
+        }
+}
+
+/* Very small screens */
+@media (max-width: 360px) {
+        .compact-row {
+                grid-template-columns: 1fr;
+                gap: 6px;
+        }
+
+        .compact-filter {
+                min-width: 0;
+        }
+}

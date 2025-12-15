@@ -1,0 +1,297 @@
+/* Dashboard Header Styles - Compact Version */
+.dashboard-header {
+        background: white;
+        border-bottom: 1px solid #e9ecef;
+        padding: 10px 25px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        min-height: 60px;
+}
+
+/* Header Left - Logo (Single Line) */
+.header-left {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+}
+
+.clmi-logo {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        cursor: default;
+}
+
+.clmi-logo-icon {
+        font-size: 1.6rem;
+        color: #0057b8;
+        min-width: 28px;
+}
+
+.clmi-logo-text {
+        display: flex;
+        align-items: baseline;
+        gap: 6px;
+        line-height: 1;
+}
+
+.clmi-logo-main {
+        font-size: 1.4rem;
+        font-weight: 700;
+        color: #0057b8;
+        letter-spacing: 0.5px;
+}
+
+.clmi-platform-text {
+        font-size: 1rem;
+        font-weight: 500;
+        color: #6c757d;
+        letter-spacing: 0.3px;
+        opacity: 0.8;
+}
+
+/* Header Right - User and AI Button */
+.header-right {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+}
+
+/* Welcome User - More Compact */
+.welcome-user {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        line-height: 1.2;
+}
+
+.welcome-text {
+        font-size: 0.8rem;
+        color: #6c757d;
+        font-weight: 500;
+}
+
+.user-name {
+        font-size: 1rem;
+        font-weight: 600;
+        color: #0057b8;
+        max-width: 180px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+}
+
+/* AI Recommendation Button - More Compact */
+.ai-recommendation-btn {
+        background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+        border: none;
+        border-radius: 50px;
+        padding: 6px 16px 6px 10px;
+        color: white;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        cursor: pointer;
+        transition: all 0.3s;
+        box-shadow: 0 3px 10px rgba(40, 167, 69, 0.15);
+        position: relative;
+        overflow: hidden;
+}
+
+.ai-recommendation-btn:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 4px 12px rgba(40, 167, 69, 0.25);
+        background: linear-gradient(135deg, #218838 0%, #1ca87e 100%);
+}
+
+.ai-recommendation-btn:active {
+        transform: translateY(0);
+}
+
+/* AI Button Icon - Smaller */
+.ai-btn-icon {
+        position: relative;
+        width: 30px;
+        height: 30px;
+        background: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+}
+
+.ai-btn-icon i {
+        font-size: 1rem;
+        color: #28a745;
+        z-index: 1;
+        position: relative;
+}
+
+/* AI Pulse Animation - Smaller */
+.ai-pulse {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(40, 167, 69, 0.1);
+        border-radius: 50%;
+        animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+        0% {
+                transform: scale(0.95);
+                opacity: 1;
+        }
+
+        50% {
+                transform: scale(1.03);
+                opacity: 0.7;
+        }
+
+        100% {
+                transform: scale(0.95);
+                opacity: 1;
+        }
+}
+
+/* AI Button Text - Smaller */
+.ai-btn-text {
+        font-weight: 600;
+        font-size: 0.85rem;
+        letter-spacing: 0.3px;
+        white-space: nowrap;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+        .dashboard-header {
+                padding: 8px 18px;
+                min-height: 55px;
+        }
+
+        .clmi-logo {
+                gap: 8px;
+        }
+
+        .clmi-logo-icon {
+                font-size: 1.4rem;
+                min-width: 24px;
+        }
+
+        .clmi-logo-main {
+                font-size: 1.2rem;
+        }
+
+        .clmi-platform-text {
+                font-size: 0.9rem;
+        }
+
+        .header-right {
+                gap: 12px;
+        }
+
+        .welcome-user {
+                max-width: 120px;
+        }
+
+        .welcome-text {
+                font-size: 0.75rem;
+        }
+
+        .user-name {
+                font-size: 0.9rem;
+                max-width: 120px;
+        }
+
+        .ai-recommendation-btn {
+                padding: 5px 12px 5px 8px;
+                gap: 6px;
+        }
+
+        .ai-btn-icon {
+                width: 26px;
+                height: 26px;
+        }
+
+        .ai-btn-icon i {
+                font-size: 0.9rem;
+        }
+
+        .ai-btn-text {
+                font-size: 0.8rem;
+        }
+}
+
+@media (max-width: 480px) {
+        .dashboard-header {
+                padding: 6px 12px;
+                min-height: 50px;
+        }
+
+        .clmi-logo {
+                gap: 6px;
+        }
+
+        .clmi-logo-icon {
+                font-size: 1.2rem;
+                min-width: 20px;
+        }
+
+        .clmi-logo-main {
+                font-size: 1rem;
+        }
+
+        .clmi-platform-text {
+                font-size: 0.8rem;
+        }
+
+        .header-right {
+                gap: 8px;
+        }
+
+        .welcome-user {
+                max-width: 100px;
+        }
+
+        .welcome-text {
+                font-size: 0.7rem;
+        }
+
+        .user-name {
+                font-size: 0.85rem;
+                max-width: 100px;
+        }
+
+        .ai-recommendation-btn {
+                padding: 4px 10px 4px 6px;
+                gap: 5px;
+        }
+
+        .ai-btn-icon {
+                width: 24px;
+                height: 24px;
+        }
+
+        .ai-btn-icon i {
+                font-size: 0.8rem;
+        }
+
+        .ai-btn-text {
+                font-size: 0.75rem;
+        }
+}
+
+@media (max-width: 360px) {
+        .clmi-platform-text {
+                display: none;
+        }
+
+        .clmi-logo-main {
+                font-size: 1.1rem;
+        }
+}

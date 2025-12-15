@@ -1,0 +1,32 @@
+.cta {
+        padding: 80px 0;
+        background: linear-gradient(135deg, #0057b8 0%, #007bff 100%);
+        color: white;
+        text-align: center;
+}
+
+.cta h2 {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+}
+
+.cta p {
+        font-size: 1.2rem;
+        max-width: 700px;
+        margin: 0 auto 40px;
+}
+
+@media (max-width: 768px) {
+        .cta {
+                padding: 60px 0;
+        }
+
+        .cta h2 {
+                font-size: 2rem;
+        }
+
+        .cta p {
+                font-size: 1.1rem;
+                padding: 0 15px;
+        }
+}

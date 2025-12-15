@@ -1,0 +1,99 @@
+/* Select Dropdown Styles for Jobs Page */
+
+.filter-group {
+        display: flex;
+        align-items: center;
+        gap: 2px;
+        background: #f8f9fa;
+        padding: 2px 4px;
+        border-radius: 8px;
+        border: 2px solid #e9ecef;
+        transition: all 0.3s;
+        flex: 1;
+        min-width: 50px;
+}
+
+.filter-group:hover {
+        border-color: #0057b8;
+        box-shadow: 0 2px 8px rgba(0, 87, 184, 0.1);
+}
+
+.filter-group i {
+        color: #0057b8;
+        font-size: 0.85rem;
+        min-width: 16px;
+}
+
+.filter-select {
+        border: none;
+        background: transparent;
+        color: #495057;
+        font-size: 0.85rem;
+        font-weight: 400;
+        outline: none;
+        cursor: pointer;
+        width: 100%;
+        padding: 2px 0;
+}
+
+.filter-select:focus {
+        outline: none;
+}
+
+.filter-select option {
+        padding: 2px;
+        background: white;
+        color: #333;
+}
+
+/* Adjust filter row spacing */
+.filter-row {
+        display: flex;
+        gap: 2px;
+        margin-bottom: 2px;
+        flex-wrap: wrap;
+}
+
+.filter-row .filter-group {
+        flex: 1;
+        min-width: calc(50% - 10px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+        .filter-row {
+                flex-direction: column;
+                gap: 2px;
+        }
+
+        .filter-row .filter-group {
+                min-width: 100%;
+        }
+
+        .filter-group {
+                padding: 2px 6px;
+        }
+}
+
+@media (max-width: 480px) {
+        .filter-select {
+                font-size: 0.9rem;
+        }
+
+        .filter-group i {
+                font-size: 0.9rem;
+        }
+}
+
+/* Active/Inactive status dot */
+.skill-id .fa-circle.active {
+        color: #4CAF50;
+        font-size: 0.7rem;
+        margin-right: 5px;
+}
+
+.skill-id .fa-circle.inactive {
+        color: #757575;
+        font-size: 0.7rem;
+        margin-right: 5px;
+}
