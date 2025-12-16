@@ -9,7 +9,7 @@ from routes.jobs import jobs_bp
 from routes.skills import skills_bp
 from routes.universities import universities_bp
 from routes.analytics import analytics_bp
-
+from routes.chatbot import chatbot
 app = Flask(__name__)
 app.config.from_object(Config)
 
@@ -36,6 +36,7 @@ app.register_blueprint(jobs_bp)
 app.register_blueprint(skills_bp)
 app.register_blueprint(universities_bp)
 app.register_blueprint(analytics_bp)
+app.register_blueprint(chatbot)
 
 @app.route('/')
 def index():
