@@ -1,9 +1,13 @@
 from flask import Blueprint, request, jsonify
 from google import genai
+from openai import OpenAI
+import os
+from dotenv import load_dotenv
 
+load_dotenv()
 chatbot = Blueprint('chatbot', __name__)
 
-client = genai.Client()
+client = OpenAI(api_key=os.getenv('DEEPSEEK_API_KEY'), base_url="https://api.deepseek.com")
 
 @chatbot.route("/api/chatbot", methods = ['POST'])
 def bot():
@@ -19,9 +23,18 @@ def bot():
 
 def get_chat_bot(msg):
 
-    response = client.models.generate_content(
-            model="Gemini 2.5 Pro",
-            contents=msg,
-        )
+    # client = OpenAI()
+
+    response = client.chat.completions.create(
+        model="deepseek-chat",
+        messages=[
+            {"role": "system", "content": "You are a helpful assistant"},
+            {"role": "user", "content": "Hello"},
+        ],
+        stream=False
+    )
+
+    # print(os.getenv('DEEPSEEK_API_KEY'))
+    
         
-    return response
+    return response.choices[0].message.content
