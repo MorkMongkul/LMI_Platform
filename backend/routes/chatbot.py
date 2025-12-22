@@ -7,7 +7,7 @@ from dotenv import load_dotenv
 load_dotenv()
 chatbot = Blueprint('chatbot', __name__)
 
-client = OpenAI(api_key=os.getenv('DEEPSEEK_API_KEY'), base_url="https://api.deepseek.com")
+# client = OpenAI(api_key=os.getenv('DEEPSEEK_API_KEY'), base_url="https://api.deepseek.com")
 
 @chatbot.route("/api/chatbot", methods = ['POST'])
 def bot():
@@ -24,17 +24,15 @@ def bot():
 def get_chat_bot(msg):
 
     # client = OpenAI()
+    client = genai.Client(api_key=os.getenv('api_key'))
 
-    response = client.chat.completions.create(
-        model="deepseek-chat",
-        messages=[
-            {"role": "system", "content": "You are a helpful assistant"},
-            {"role": "user", "content": "Hello"},
-        ],
-        stream=False
+    response = client.models.generate_content(
+        model="gemini-2.5-flash", contents="Explain how AI works in a few words"
     )
 
     # print(os.getenv('DEEPSEEK_API_KEY'))
     
         
-    return response.choices[0].message.content
+    # return response.choices[0].message.content
+
+    return response.text
