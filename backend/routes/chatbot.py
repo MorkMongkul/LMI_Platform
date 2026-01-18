@@ -27,7 +27,7 @@ def get_chat_bot(msg):
     client = genai.Client(api_key=os.getenv('api_key'))
 
     response = client.models.generate_content(
-        model="gemini-2.5-flash", contents="Explain how AI works in a few words"
+        model="gemini-2.5-flash", contents="You have to bring context anything related to the study of job market specially Cambodia related. Other things you have to tell them back that the scope is too big."
     )
 
     # print(os.getenv('DEEPSEEK_API_KEY'))
